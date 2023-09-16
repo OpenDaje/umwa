@@ -31,8 +31,8 @@
     },
     "config": {
         "allow-plugins": {
-            "php-http/discovery": true,
-            "bamarni/composer-bin-plugin": true
+            "bamarni/composer-bin-plugin": true,
+            "php-http/discovery": true
         },
         "optimize-autoloader": true,
         "preferred-install": {
@@ -43,8 +43,8 @@
     "extra": {
         "bamarni-bin": {
             "bin-links": true,
-            "target-directory": "tools",
-            "forward-command": false
+            "forward-command": false,
+            "target-directory": "tools"
         }
     },
     "autoload": {
