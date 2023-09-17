@@ -35,6 +35,14 @@ abstract class AbstractApi
     }
 
     /**
+     * Get the client instance.
+     */
+    protected function getInstanceId(): string
+    {
+        return $this->client->getOptions()->getInstanceId();
+    }
+
+    /**
      * @return $this
      */
     public function configure()

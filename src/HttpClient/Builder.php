@@ -12,6 +12,7 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\Authentication\Matching;
 use Http\Message\Authentication\QueryParam;
+use OpenDaje\UmWa\Options;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\RequestInterface;
@@ -35,11 +36,10 @@ class Builder
         $this->streamFactory = $streamFactory ?? Psr17FactoryDiscovery::findStreamFactory();
     }
 
-    public function getHttpClient(): HttpMethodsClientInterface
+    public function getHttpClient(Options $options): HttpMethodsClientInterface
     {
-        // TODO: remove hardcoded token
         $authenticationWithTokenInQueryParam = new QueryParam([
-            'token' => 'xxxxxxx',
+            'token' => $options->getToken(),
         ]);
 
         $authentication = new Matching(
@@ -49,13 +49,14 @@ class Builder
 
         $httpClientPlugins = [
             new AuthenticationPlugin($authentication),
-            new AddHostPlugin(Psr17FactoryDiscovery::findUriFactory()->createUri('https://api.ultramsg.com/')),
+            new AddHostPlugin($options->getUri()),
             new HeaderDefaultsPlugin([
-                'User-Agent' => 'open-daje-ultramsg-api/v0.0.1 (https://github.com/OpenDaje/umwa)',
+                'User-Agent' => 'od-ultramsg-php-client (https://github.com/OpenDaje/umwa)',
                 'Accept' => 'application/json',
                 'Content-Type' => 'application/x-www-form-urlencoded',
             ]),
         ];
+
         return new HttpMethodsClient(
             (new PluginClientFactory())->createClient($this->httpClient, $httpClientPlugins),
             $this->requestFactory,
