@@ -43,6 +43,14 @@ abstract class AbstractApi
     }
 
     /**
+     * Get the ultramsg token.
+     */
+    public function getToken(): string
+    {
+        return $this->client->getOptions()->getToken();
+    }
+
+    /**
      * @return $this
      */
     public function configure()
