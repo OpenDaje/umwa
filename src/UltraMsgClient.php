@@ -11,8 +11,12 @@ class UltraMsgClient
 {
     private Builder $httpClientBuilder;
 
-    public function __construct(Builder $httpClientBuilder = null)
+    private Options $options;
+
+    public function __construct(Options $options = null)
     {
+        $this->options = $options ?? new Options();
+
         $this->httpClientBuilder = $httpClientBuilder ?? new Builder();
     }
 
@@ -23,6 +27,7 @@ class UltraMsgClient
     {
         return match ($name) {
             'instance', 'device' => new Api\Instance($this),
+            'chats' => new Api\Chats($this),
 
             default => throw new InvalidArgumentException(
                 sprintf('Undefined api instance called: "%s"', $name)
@@ -32,7 +37,12 @@ class UltraMsgClient
 
     public function getHttpClient(): HttpMethodsClientInterface
     {
-        return $this->getHttpClientBuilder()->getHttpClient();
+        return $this->getHttpClientBuilder()->getHttpClient($this->options);
+    }
+
+    public function getOptions(): Options
+    {
+        return $this->options;
     }
 
     protected function getHttpClientBuilder(): Builder

@@ -8,7 +8,7 @@ use Psr\Http\Message\UriInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
- * Configuration container for the Sentry client.
+ * Configuration container for the UltraMsg client.
  */
 class Options
 {
