@@ -1,2 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.15.0@5c774aca4746caf3d239d9c8cadb9f882ca29352"/>
+<files psalm-version="5.15.0@5c774aca4746caf3d239d9c8cadb9f882ca29352">
+  <file src="src/Api/AbstractApi.php">
+    <PossiblyNullArgument>
+      <code><![CDATA[$this->createJsonBody($parameters)]]></code>
+    </PossiblyNullArgument>
+    <PossiblyUnusedMethod>
+      <code>configure</code>
+      <code>delete</code>
+      <code>getClient</code>
+      <code>head</code>
+      <code>patch</code>
+      <code>post</code>
+      <code>put</code>
+    </PossiblyUnusedMethod>
+    <RedundantCondition>
+      <code>0</code>
+    </RedundantCondition>
+    <TypeDoesNotContainType>
+      <code>empty($parameters)</code>
+    </TypeDoesNotContainType>
+  </file>
+  <file src="src/Api/Chats.php">
+    <PossiblyUnusedMethod>
+      <code>getChats</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src/Api/Instance.php">
+    <PossiblyUnusedMethod>
+      <code>getConnectedPhoneInfo</code>
+      <code>getQR</code>
+      <code>getQrCode</code>
+      <code>getSettings</code>
+      <code>getStatus</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src/HttpClient/Builder.php">
+    <DeprecatedClass>
+      <code><![CDATA[new Matching(
+            $authenticationWithTokenInQueryParam,
+            fn (RequestInterface $request) => 'GET' === $request->getMethod()
+        )]]></code>
+    </DeprecatedClass>
+  </file>
+  <file src="src/Message/ResponseMediator.php">
+    <MixedAssignment>
+      <code>$content</code>
+    </MixedAssignment>
+    <PossiblyUnusedMethod>
+      <code>getPagination</code>
+    </PossiblyUnusedMethod>
+    <UnnecessaryVarAnnotation>
+      <code>string[]</code>
+    </UnnecessaryVarAnnotation>
+  </file>
+  <file src="src/Options.php">
+    <MixedInferredReturnType>
+      <code>UriFactoryInterface</code>
+      <code>string</code>
+      <code>string</code>
+    </MixedInferredReturnType>
+    <MixedPropertyTypeCoercion>
+      <code><![CDATA[$this->resolver->resolve($options)]]></code>
+    </MixedPropertyTypeCoercion>
+    <MixedReturnStatement>
+      <code><![CDATA[$this->options['instanceId']]]></code>
+      <code><![CDATA[$this->options['token']]]></code>
+      <code><![CDATA[$this->options['uri_factory']]]></code>
+    </MixedReturnStatement>
+    <UnusedProperty>
+      <code>$resolver</code>
+    </UnusedProperty>
+  </file>
+  <file src="src/UltraMsgClient.php">
+    <MixedAssignment>
+      <code><![CDATA[$this->httpClientBuilder]]></code>
+    </MixedAssignment>
+    <PossiblyUnusedMethod>
+      <code>api</code>
+    </PossiblyUnusedMethod>
+    <UndefinedVariable>
+      <code>$httpClientBuilder</code>
+    </UndefinedVariable>
+  </file>
+  <file src="tests/Unit/UltraMsgClientTest.php">
+    <UnusedClass>
+      <code>UltraMsgClientTest</code>
+    </UnusedClass>
+  </file>
+</files>
