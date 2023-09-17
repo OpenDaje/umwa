@@ -35,9 +35,9 @@ abstract class AbstractApi
     }
 
     /**
-     * Get the client instance.
+     * Get the ultramsg instance id.
      */
-    protected function getInstanceId(): string
+    public function getInstanceId(): string
     {
         return $this->client->getOptions()->getInstanceId();
     }
