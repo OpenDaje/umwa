@@ -62,8 +62,18 @@
     "prefer-stable": true,
     "scripts": {
         "cs": "./vendor/bin/ecs",
-        "cs-fix": "./vendor/bin/ecs --fix",
+        "cs:fix": "./vendor/bin/ecs --fix",
         "rc": "./vendor/bin/rector  process --dry-run",
-        "sa": "./vendor/bin/psalm"
+        "rc:fix": "./vendor/bin/rector",
+        "sa": "./vendor/bin/psalm",
+        "tu": "./vendor/bin/phpunit --testdox tests/Unit"
+    },
+    "scripts-descriptions": {
+        "cs": "Check php coding style",
+        "cs:fix": "Fix php coding style",
+        "rc": "Check rector roules",
+        "rc:fix": "Fix rector issues",
+        "sa": "Check static analysis (psalm)",
+        "tu": "Run unit testsuite"
     }
 }
