@@ -7,6 +7,8 @@ class Instance extends AbstractApi
     /**
      * Get the instance status
      *
+     * Example: initialize|qr|retrying|loading|authenticated|disconnected|standby
+     *
      * @see https://docs.ultramsg.com/api/get/instance/status
      */
     public function getStatus(): array|string
@@ -16,6 +18,13 @@ class Instance extends AbstractApi
 
     /**
      * Get instance settings
+     *
+     * sendDelay : Delay in seconds between sending message, Default 1 second
+     * webhook_url : Http or https URL for receiving notifications.
+     * webhook_message_received : on/off notifications in webhooks when message received.
+     * webhook_message_create : on/off notifications in webhooks when message create.
+     * webhook_message_ack : on/off ack (message delivered and message viewed) notifications in webhooks.
+     * webhook_message_download_media : on/off to get received document / media files.
      *
      * @see https://docs.ultramsg.com/api/get/instance/settings
      */
@@ -35,7 +44,7 @@ class Instance extends AbstractApi
     }
 
     /**
-     * Get QR image for authentication
+     * Get QR code for authentication
      *
      * @see https://docs.ultramsg.com/api/get/instance/qrCode
      */
@@ -108,12 +117,12 @@ class Instance extends AbstractApi
     /**
      * Reset instance to default settings
      *
-     * @see https://docs.ultramsg.com/api/post/instance/clear
-     *
      * Delete all settings :
      * Instant messages will be deleted (sent, queue,..)
      * settings will reset to default
      * session will be deleted and instance return to QR
+     *
+     * @see https://docs.ultramsg.com/api/post/instance/clear
      */
     public function clear(): array|string
     {
