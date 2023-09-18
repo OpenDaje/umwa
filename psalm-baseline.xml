@@ -50,6 +50,11 @@
       <code>settings</code>
     </PossiblyUnusedMethod>
   </file>
+  <file src="src/Api/Media.php">
+    <UnusedClass>
+      <code>Media</code>
+    </UnusedClass>
+  </file>
   <file src="src/Api/Messages.php">
     <UnusedClass>
       <code>Messages</code>
