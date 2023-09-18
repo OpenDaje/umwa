@@ -1,5 +1,5 @@
 {
-    "name": "opendaje/umwa",
+    "name": "opendaje/ultramsg-client",
     "type": "library",
     "description": "Ultramsg WhatsApp API based on PSR standard.",
     "keywords": [

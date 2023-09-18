@@ -51,7 +51,7 @@ class Builder
             new AuthenticationPlugin($authentication),
             new AddHostPlugin($options->getUri()),
             new HeaderDefaultsPlugin([
-                'User-Agent' => 'od-ultramsg-php-client (https://github.com/OpenDaje/umwa)',
+                'User-Agent' => 'od-ultramsg-php-client (https://github.com/OpenDaje/ultramsg-client)',
                 'Accept' => 'application/json',
                 'Content-Type' => 'application/x-www-form-urlencoded',
             ]),

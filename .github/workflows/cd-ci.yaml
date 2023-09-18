@@ -5,7 +5,7 @@ on: [ push ]
 jobs:
   commit-stage-workflow:
     name: Commit Stage
-    uses: opendaje/umwa/.github/workflows/commit-stage.yaml@main
+    uses: opendaje/ultramsg-client/.github/workflows/commit-stage.yaml@main
     with:
       triggering-sha: "${{ github.sha }}"
 
