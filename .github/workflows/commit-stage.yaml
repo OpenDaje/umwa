@@ -83,17 +83,21 @@ jobs:
           composer validate --strict --ansi
 
       - name: Run composer normalize
+        if: always()
         run: |
           composer-normalize --dry-run --ansi
 
       - name: Run ecs CODING STANDARDS
+        if: always()
         run: |
           ./vendor/bin/ecs
 
       - name: Run psalm STATIC ANALYSIS
+        if: always()
         run: |
           ./vendor/bin/psalm
 
       - name: Run rector MAINTENANCE
+        if: always()
         run: |
           ./vendor/bin/rector process --dry-run
