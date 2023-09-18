@@ -104,4 +104,24 @@ class Instance extends AbstractApi
             ])
         );
     }
+
+    /**
+     * Reset instance to default settings
+     *
+     * @see https://docs.ultramsg.com/api/post/instance/clear
+     *
+     * Delete all settings :
+     * Instant messages will be deleted (sent, queue,..)
+     * settings will reset to default
+     * session will be deleted and instance return to QR
+     */
+    public function clear(): array|string
+    {
+        return $this->postRaw(
+            '/' . rawurlencode($this->getInstanceId()) . '/instance/clear',
+            http_build_query([
+                'token' => $this->getToken(),
+            ])
+        );
+    }
 }

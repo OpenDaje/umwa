@@ -27,6 +27,7 @@
   </file>
   <file src="src/Api/Instance.php">
     <PossiblyUnusedMethod>
+      <code>clear</code>
       <code>getConnectedPhoneInfo</code>
       <code>getQR</code>
       <code>getQrCode</code>
