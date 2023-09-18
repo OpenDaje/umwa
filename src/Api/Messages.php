@@ -72,7 +72,7 @@ class Messages extends AbstractApi
      *
      * @see https://docs.ultramsg.com/api/post/messages/image
      */
-    public function sendImageMessage(string $to, string $image, string $caption = '', int $priority = 10, string $referenceId = '', string $noCache = '', string $msgId = '', string $mentions = ''): array|string
+    public function sendImageMessage(string $to, string $image, string $caption = '', int $priority = 10, string $referenceId = '', bool $noCache = false, string $msgId = '', string $mentions = ''): array|string
     {
         return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . 'messages/image', http_build_query([
             'token' => $this->getToken(),
@@ -92,7 +92,7 @@ class Messages extends AbstractApi
      *
      * @see https://docs.ultramsg.com/api/post/messages/sticker
      */
-    public function sendStickerMessage(string $to, string $sticker, int $priority = 10, string $referenceId = '', string $noCache = '', string $msgId = ''): array|string
+    public function sendStickerMessage(string $to, string $sticker, int $priority = 10, string $referenceId = '', bool $noCache = false, string $msgId = ''): array|string
     {
         return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . 'messages/sticker', http_build_query([
             'token' => $this->getToken(),
@@ -110,7 +110,7 @@ class Messages extends AbstractApi
      *
      * @see https://docs.ultramsg.com/api/post/messages/document
      */
-    public function sendDocumentMessage(string $to, string $filename, string $document, string $caption = '', int $priority = 10, string $referenceId = '', string $noCache = '', string $msgId = '', string $mentions = ''): array|string
+    public function sendDocumentMessage(string $to, string $filename, string $document, string $caption = '', int $priority = 10, string $referenceId = '', bool $noCache = false, string $msgId = '', string $mentions = ''): array|string
     {
         return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . 'messages/image', http_build_query([
             'token' => $this->getToken(),
@@ -131,7 +131,7 @@ class Messages extends AbstractApi
      *
      * @see https://docs.ultramsg.com/api/post/messages/audio
      */
-    public function sendAudioMessage(string $to, string $audio, int $priority = 10, string $referenceId = '', string $noCache = '', string $msgId = ''): array|string
+    public function sendAudioMessage(string $to, string $audio, int $priority = 10, string $referenceId = '', bool $noCache = false, string $msgId = ''): array|string
     {
         return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . 'messages/audio', http_build_query([
             'token' => $this->getToken(),
@@ -149,7 +149,7 @@ class Messages extends AbstractApi
      *
      * @see https://docs.ultramsg.com/api/post/messages/voice
      */
-    public function sendVoiceMessage(string $to, string $audio, int $priority = 10, string $referenceId = '', string $noCache = '', string $msgId = ''): array|string
+    public function sendVoiceMessage(string $to, string $audio, int $priority = 10, string $referenceId = '', bool $noCache = false, string $msgId = ''): array|string
     {
         return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . 'messages/voice', http_build_query([
             'token' => $this->getToken(),
@@ -167,7 +167,7 @@ class Messages extends AbstractApi
      *
      * @see https://docs.ultramsg.com/api/post/messages/video
      */
-    public function sendVideoMessage(string $to, string $video, string $caption = '', int $priority = 10, string $referenceId = '', string $noCache = '', string $msgId = '', string $mentions = ''): array|string
+    public function sendVideoMessage(string $to, string $video, string $caption = '', int $priority = 10, string $referenceId = '', bool $noCache = false, string $msgId = '', string $mentions = ''): array|string
     {
         return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . 'messages/video', http_build_query([
             'token' => $this->getToken(),
