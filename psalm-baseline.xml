@@ -32,6 +32,7 @@
       <code>getQrCode</code>
       <code>getSettings</code>
       <code>getStatus</code>
+      <code>restart</code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src/HttpClient/Builder.php">
@@ -75,9 +76,6 @@
     <MixedAssignment>
       <code><![CDATA[$this->httpClientBuilder]]></code>
     </MixedAssignment>
-    <PossiblyUnusedMethod>
-      <code>api</code>
-    </PossiblyUnusedMethod>
     <UndefinedVariable>
       <code>$httpClientBuilder</code>
     </UndefinedVariable>
