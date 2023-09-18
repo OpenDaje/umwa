@@ -76,6 +76,9 @@
     <MixedAssignment>
       <code><![CDATA[$this->httpClientBuilder]]></code>
     </MixedAssignment>
+    <PossiblyUnusedMethod>
+      <code>api</code>
+    </PossiblyUnusedMethod>
     <UndefinedVariable>
       <code>$httpClientBuilder</code>
     </UndefinedVariable>
