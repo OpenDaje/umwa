@@ -45,6 +45,11 @@
       <code>settings</code>
     </PossiblyUnusedMethod>
   </file>
+  <file src="src/Api/Messages.php">
+    <UnusedClass>
+      <code>Messages</code>
+    </UnusedClass>
+  </file>
   <file src="src/HttpClient/Builder.php">
     <DeprecatedClass>
       <code><![CDATA[new Matching(
