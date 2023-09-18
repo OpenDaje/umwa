@@ -55,6 +55,21 @@ class Instance extends AbstractApi
     }
 
     /**
+     * Logout from WhatsApp Web to get new QR code.
+     *
+     * @see https://docs.ultramsg.com/api/post/instance/logout
+     */
+    public function logout(): array|string
+    {
+        return $this->postRaw(
+            '/' . rawurlencode($this->getInstanceId()) . '/instance/logout',
+            http_build_query([
+                'token' => $this->getToken(),
+            ])
+        );
+    }
+
+    /**
      * Restart your WhatsApp instance.
      *
      * @see https://docs.ultramsg.com/api/post/instance/restart

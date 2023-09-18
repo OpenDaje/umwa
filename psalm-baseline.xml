@@ -32,6 +32,7 @@
       <code>getQrCode</code>
       <code>getSettings</code>
       <code>getStatus</code>
+      <code>logout</code>
       <code>restart</code>
     </PossiblyUnusedMethod>
   </file>
