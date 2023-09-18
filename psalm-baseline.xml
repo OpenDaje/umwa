@@ -34,6 +34,7 @@
       <code>getStatus</code>
       <code>logout</code>
       <code>restart</code>
+      <code>settings</code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src/HttpClient/Builder.php">

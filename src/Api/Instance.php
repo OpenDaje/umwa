@@ -83,4 +83,25 @@ class Instance extends AbstractApi
             ])
         );
     }
+
+    /**
+     * Update instance settings
+     *
+     * @see https://docs.ultramsg.com/api/post/instance/settings
+     */
+    public function settings(int $sendDelay = 1, string $webhookUrl = '', string $webhookMessageReceived = '', string $webhookMessageCreate = '', string $webhookMessageAck = '', string $webhookMessageDownloadMedia = ''): array|string
+    {
+        return $this->postRaw(
+            '/' . rawurlencode($this->getInstanceId()) . '/instance/settings',
+            http_build_query([
+                'token' => $this->getToken(),
+                'sendDelay' => $sendDelay,
+                'webhook_url' => $webhookUrl,
+                'webhook_message_received' => $webhookMessageReceived,
+                'webhook_message_create' => $webhookMessageCreate,
+                'webhook_message_ack' => $webhookMessageAck,
+                'webhook_message_download_media' => $webhookMessageDownloadMedia,
+            ])
+        );
+    }
 }
