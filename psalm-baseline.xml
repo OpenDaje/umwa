@@ -32,6 +32,11 @@
       <code>unarchiveChat</code>
     </PossiblyUnusedMethod>
   </file>
+  <file src="src/Api/Groups.php">
+    <UnusedClass>
+      <code>Groups</code>
+    </UnusedClass>
+  </file>
   <file src="src/Api/Instance.php">
     <PossiblyUnusedMethod>
       <code>clear</code>
