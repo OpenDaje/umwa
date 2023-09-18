@@ -22,9 +22,14 @@
   </file>
   <file src="src/Api/Chats.php">
     <PossiblyUnusedMethod>
+      <code>archiveChat</code>
+      <code>clearMessages</code>
+      <code>deleteChat</code>
       <code>getChatMessages</code>
       <code>getChats</code>
       <code>getChatsIds</code>
+      <code>markAsReaded</code>
+      <code>unarchiveChat</code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Api/Instance.php">
