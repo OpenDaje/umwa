@@ -56,7 +56,7 @@ class Messages extends AbstractApi
      */
     public function sendChatMessage(string $to, string $body, int $priority = 10, string $referenceId = '', string $msgId = '', string $mentions = ''): array|string
     {
-        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . 'messages/chat', http_build_query([
+        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . '/messages/chat', http_build_query([
             'token' => $this->getToken(),
             'to' => $to,
             'body' => $body,
@@ -74,7 +74,7 @@ class Messages extends AbstractApi
      */
     public function sendImageMessage(string $to, string $image, string $caption = '', int $priority = 10, string $referenceId = '', bool $noCache = false, string $msgId = '', string $mentions = ''): array|string
     {
-        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . 'messages/image', http_build_query([
+        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . '/messages/image', http_build_query([
             'token' => $this->getToken(),
             'to' => $to,
             'image' => $image,
@@ -94,7 +94,7 @@ class Messages extends AbstractApi
      */
     public function sendStickerMessage(string $to, string $sticker, int $priority = 10, string $referenceId = '', bool $noCache = false, string $msgId = ''): array|string
     {
-        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . 'messages/sticker', http_build_query([
+        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . '/messages/sticker', http_build_query([
             'token' => $this->getToken(),
             'to' => $to,
             'sticker' => $sticker,
@@ -112,7 +112,7 @@ class Messages extends AbstractApi
      */
     public function sendDocumentMessage(string $to, string $filename, string $document, string $caption = '', int $priority = 10, string $referenceId = '', bool $noCache = false, string $msgId = '', string $mentions = ''): array|string
     {
-        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . 'messages/image', http_build_query([
+        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . '/messages/image', http_build_query([
             'token' => $this->getToken(),
             'to' => $to,
             'filename' => $filename,
@@ -133,7 +133,7 @@ class Messages extends AbstractApi
      */
     public function sendAudioMessage(string $to, string $audio, int $priority = 10, string $referenceId = '', bool $noCache = false, string $msgId = ''): array|string
     {
-        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . 'messages/audio', http_build_query([
+        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . '/messages/audio', http_build_query([
             'token' => $this->getToken(),
             'to' => $to,
             'audio' => $audio,
@@ -151,7 +151,7 @@ class Messages extends AbstractApi
      */
     public function sendVoiceMessage(string $to, string $audio, int $priority = 10, string $referenceId = '', bool $noCache = false, string $msgId = ''): array|string
     {
-        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . 'messages/voice', http_build_query([
+        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . '/messages/voice', http_build_query([
             'token' => $this->getToken(),
             'to' => $to,
             'audio' => $audio,
@@ -169,7 +169,7 @@ class Messages extends AbstractApi
      */
     public function sendVideoMessage(string $to, string $video, string $caption = '', int $priority = 10, string $referenceId = '', bool $noCache = false, string $msgId = '', string $mentions = ''): array|string
     {
-        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . 'messages/video', http_build_query([
+        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . '/messages/video', http_build_query([
             'token' => $this->getToken(),
             'to' => $to,
             'video' => $video,
@@ -189,7 +189,7 @@ class Messages extends AbstractApi
      */
     public function sendContact(string $to, string $contact, int $priority = 10, string $referenceId = '', string $msgId = ''): array|string
     {
-        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . 'messages/contact', http_build_query([
+        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . '/messages/contact', http_build_query([
             'token' => $this->getToken(),
             'to' => $to,
             'contact' => $contact,
@@ -206,7 +206,7 @@ class Messages extends AbstractApi
      */
     public function sendLocation(string $to, string $address, float $lat, float $lng, int $priority = 10, string $referenceId = '', string $msgId = ''): array|string
     {
-        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . 'messages/location', http_build_query([
+        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . '/messages/location', http_build_query([
             'token' => $this->getToken(),
             'to' => $to,
             'address' => $address,
@@ -225,7 +225,7 @@ class Messages extends AbstractApi
      */
     public function sendVcard(string $to, string $vCard, int $priority = 10, string $referenceId = '', string $msgId = ''): array|string
     {
-        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . 'messages/vcard', http_build_query([
+        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . '/messages/vcard', http_build_query([
             'token' => $this->getToken(),
             'to' => $to,
             'vcard' => $vCard,
@@ -242,7 +242,7 @@ class Messages extends AbstractApi
      */
     public function sendReaction(string $msgId, string $emoji): array|string
     {
-        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . 'messages/reaction', http_build_query([
+        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . '/messages/reaction', http_build_query([
             'token' => $this->getToken(),
             'msgId' => $msgId,
             'emoji' => $emoji,
@@ -256,7 +256,7 @@ class Messages extends AbstractApi
      */
     public function deleteMessage(string $msgId): array|string
     {
-        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . 'messages/delete', http_build_query([
+        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . '/messages/delete', http_build_query([
             'token' => $this->getToken(),
             'msgId' => $msgId,
         ]));
@@ -269,7 +269,7 @@ class Messages extends AbstractApi
      */
     public function resendByStatus(string $status): array|string
     {
-        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . 'messages/resendByStatus', http_build_query([
+        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . '/messages/resendByStatus', http_build_query([
             'token' => $this->getToken(),
             'status' => $status,
         ]));
@@ -282,7 +282,7 @@ class Messages extends AbstractApi
      */
     public function resendById(string $msgId): array|string
     {
-        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . 'messages/resendById', http_build_query([
+        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . '/messages/resendById', http_build_query([
             'token' => $this->getToken(),
             'id' => $msgId,
         ]));
@@ -297,7 +297,7 @@ class Messages extends AbstractApi
      */
     public function clear(string $status): array|string
     {
-        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . 'messages/clear', http_build_query([
+        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . '/messages/clear', http_build_query([
             'token' => $this->getToken(),
             'status' => $status,
         ]));
