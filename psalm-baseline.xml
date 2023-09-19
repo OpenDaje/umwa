@@ -33,9 +33,11 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Api/Groups.php">
-    <UnusedClass>
-      <code>Groups</code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code>getGroupInfo</code>
+      <code>getGroups</code>
+      <code>getGroupsIds</code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Api/Instance.php">
     <PossiblyUnusedMethod>
@@ -51,14 +53,32 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Api/Media.php">
-    <UnusedClass>
-      <code>Media</code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code>deleteByDate</code>
+      <code>deleteMedia</code>
+      <code>upload</code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Api/Messages.php">
-    <UnusedClass>
-      <code>Messages</code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code>clear</code>
+      <code>deleteMessage</code>
+      <code>getMessages</code>
+      <code>getStatistics</code>
+      <code>resendById</code>
+      <code>resendByStatus</code>
+      <code>sendAudioMessage</code>
+      <code>sendChatMessage</code>
+      <code>sendContact</code>
+      <code>sendDocumentMessage</code>
+      <code>sendImageMessage</code>
+      <code>sendLocation</code>
+      <code>sendReaction</code>
+      <code>sendStickerMessage</code>
+      <code>sendVcard</code>
+      <code>sendVideoMessage</code>
+      <code>sendVoiceMessage</code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/HttpClient/Builder.php">
     <DeprecatedClass>
