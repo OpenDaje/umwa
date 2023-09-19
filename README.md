@@ -11,6 +11,11 @@ This will change with the release of the stable `1.0.0` version.
 * PHP >= 8.0
 * A [PSR-18 implementation](https://packagist.org/providers/psr/http-client-implementation)
 
+## About UltraMsg
+- [Website](https://ultramsg.com)
+- [Api docs](https://docs.ultramsg.com/)
+- [Official client](https://github.com/ultramsg/whatsapp-php-sdk)
+
 ## Quick install
 
 Via [Composer](https://getcomposer.org).
