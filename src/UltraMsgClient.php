@@ -26,8 +26,11 @@ class UltraMsgClient
     public function api(string $name): AbstractApi
     {
         return match ($name) {
-            'instance', 'device' => new Api\Instance($this),
             'chats' => new Api\Chats($this),
+            'groups' => new Api\Groups($this),
+            'instance', 'device' => new Api\Instance($this),
+            'media' => new Api\Media($this),
+            'messages' => new Api\Messages($this),
 
             default => throw new InvalidArgumentException(
                 sprintf('Undefined api instance called: "%s"', $name)
