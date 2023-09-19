@@ -9,7 +9,6 @@ This will change with the release of the stable `1.0.0` version.
 ## Requirements
 
 * PHP >= 8.0
-* A [PSR-17 implementation](https://packagist.org/providers/psr/http-factory-implementation)
 * A [PSR-18 implementation](https://packagist.org/providers/psr/http-client-implementation)
 
 ## Quick install
