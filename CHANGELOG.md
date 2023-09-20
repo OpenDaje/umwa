@@ -7,6 +7,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 ## [Unreleased] - XXXX-XX-XX
 - Contact Endpoints
 
+## [v0.1.2] -  2023-09-20
+### fixed
+- Symfony/options-resolver deps.
+
+
 ## [v0.1.1] -  2023-09-19
 ### fixed
 - Media api (endpoint uri)
