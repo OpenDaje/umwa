@@ -3,6 +3,7 @@
 namespace OpenDaje\UmWa\Tests\Unit;
 
 use Http\Discovery\Psr17FactoryDiscovery;
+use OpenDaje\UmWa\HttpClient\Builder;
 use OpenDaje\UmWa\Options;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\OptionsResolver\Exception\InvalidOptionsException;
@@ -61,5 +62,15 @@ class OptionTest extends TestCase
         ]);
 
         self::assertEquals($expectedUri, $clientOptions->getUri());
+    }
+
+    public function testShouldHaveADefaultClientBuilderSet(): void
+    {
+        $clientOptions = new Options([
+            'token' => 'irrelevant_token',
+            'instanceId' => 'irrelevant_instance_id',
+        ]);
+
+        self::assertInstanceOf(Builder::class, $clientOptions->getClientBuilder());
     }
 }
