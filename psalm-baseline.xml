@@ -133,9 +133,4 @@
       <code>$httpClientBuilder</code>
     </UndefinedVariable>
   </file>
-  <file src="tests/Unit/UltraMsgClientTest.php">
-    <UnusedClass>
-      <code>UltraMsgClientTest</code>
-    </UnusedClass>
-  </file>
 </files>
