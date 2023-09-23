@@ -8,6 +8,9 @@ use OpenDaje\UmWa\UltraMsgClient;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Client\ClientInterface;
 
+/**
+ * @covers \OpenDaje\UmWa\UltraMsgClient
+ */
 class UltraMsgClientTest extends TestCase
 {
     public function testName(): void
