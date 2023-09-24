@@ -3,6 +3,7 @@
 namespace OpenDaje\UmWa;
 
 use Http\Discovery\Psr17FactoryDiscovery;
+use OpenDaje\UmWa\HttpClient\Builder;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -40,12 +41,14 @@ class Options
             'instanceId' => null,
             'uri' => 'https://api.ultramsg.com',
             'uri_factory' => Psr17FactoryDiscovery::findUriFactory(),
+            'client_builder' => new Builder(),
         ]);
 
         $resolver->setAllowedTypes('token', 'string');
         $resolver->setAllowedTypes('instanceId', 'string');
         $resolver->setAllowedTypes('uri', 'string');
         $resolver->setAllowedTypes('uri_factory', UriFactoryInterface::class);
+        $resolver->setAllowedTypes('client_builder', Builder::class);
     }
 
     public function getToken(): string
@@ -66,5 +69,10 @@ class Options
     private function getUriFactory(): UriFactoryInterface
     {
         return $this->options['uri_factory'];
+    }
+
+    public function getClientBuilder(): Builder
+    {
+        return $this->options['client_builder'];
     }
 }

@@ -31,6 +31,7 @@ class UltraMsgClient
             'instance', 'device' => new Api\Instance($this),
             'media' => new Api\Media($this),
             'messages' => new Api\Messages($this),
+            'contacts' => new Api\Contacts($this),
 
             default => throw new InvalidArgumentException(
                 sprintf('Undefined api instance called: "%s"', $name)
