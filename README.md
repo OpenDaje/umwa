@@ -2,6 +2,11 @@
 #### *Easy whatsApp integration in your applications*
 
 [![CD/CI](https://github.com/OpenDaje/ultramsg-client/actions/workflows/cd-ci.yaml/badge.svg)](https://github.com/OpenDaje/ultramsg-client/actions/workflows/cd-ci.yaml)
+[![PHP Version Require](http://poser.pugx.org/opendaje/ultramsg-client/require/php)](https://packagist.org/packages/opendaje/ultramsg-client)
+[![Latest Stable Version](http://poser.pugx.org/opendaje/ultramsg-client/v)](https://packagist.org/packages/opendaje/ultramsg-client)
+[![License](http://poser.pugx.org/opendaje/ultramsg-client/license)](https://packagist.org/packages/opendaje/ultramsg-client)
+[![Total Downloads](http://poser.pugx.org/opendaje/ultramsg-client/downloads)](https://packagist.org/packages/opendaje/ultramsg-client)
+[![Latest Unstable Version](http://poser.pugx.org/opendaje/ultramsg-client/v/unstable)](https://packagist.org/packages/opendaje/ultramsg-client)
 
 ⚠  Launching early stage releases (0.x.x) could break the API according to [Semantic Versioning 2.0](https://semver.org/). We are using *minor* for breaking changes.
 This will change with the release of the stable `1.0.0` version.
