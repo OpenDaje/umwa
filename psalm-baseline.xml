@@ -33,9 +33,17 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Api/Contacts.php">
-    <UnusedClass>
-      <code>Contacts</code>
-    </UnusedClass>
+    <PossiblyUnusedMethod>
+      <code>block</code>
+      <code>checkContact</code>
+      <code>getBlockedContact</code>
+      <code>getContactImage</code>
+      <code>getContactInfo</code>
+      <code>getContacts</code>
+      <code>getContactsIds</code>
+      <code>getInvalidContacts</code>
+      <code>unblock</code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="src/Api/Groups.php">
     <PossiblyUnusedMethod>
@@ -106,6 +114,7 @@
   </file>
   <file src="src/Options.php">
     <MixedInferredReturnType>
+      <code>Builder</code>
       <code>UriFactoryInterface</code>
       <code>string</code>
       <code>string</code>
@@ -114,6 +123,7 @@
       <code><![CDATA[$this->resolver->resolve($options)]]></code>
     </MixedPropertyTypeCoercion>
     <MixedReturnStatement>
+      <code><![CDATA[$this->options['client_builder']]]></code>
       <code><![CDATA[$this->options['instanceId']]]></code>
       <code><![CDATA[$this->options['token']]]></code>
       <code><![CDATA[$this->options['uri_factory']]]></code>
@@ -132,5 +142,10 @@
     <UndefinedVariable>
       <code>$httpClientBuilder</code>
     </UndefinedVariable>
+  </file>
+  <file src="tests/Unit/Api/ContactTest.php">
+    <UnusedVariable>
+      <code>$sut</code>
+    </UnusedVariable>
   </file>
 </files>
