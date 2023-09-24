@@ -2,5 +2,19 @@
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "extends": [
         "config:base"
+    ],
+    "packageRules": [
+        {
+            "managers": ["composer"],
+            "matchPackagePatterns": ["^drupal/"],
+            "rangeStrategy": "update-lockfile",
+            "groupName": "Drupal contributed modules"
+        },
+        {
+            "managers": ["composer"],
+            "matchPackagePatterns": ["^symplify/easy-coding-standard", "^vimeo/psalm", "^psalm/plugin-phpunit", "rector/rector"],
+            "rangeStrategy": "update-lockfile",
+            "groupName": "Tools"
+        }
     ]
 }
