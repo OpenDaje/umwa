@@ -1,0 +1,18 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:base",
+        ":preserveSemverRanges",
+        ":rebaseStalePrs",
+        ":enableVulnerabilityAlertsWithLabel('security')",
+        "group:recommended"
+    ],
+    "packageRules": [
+        {
+            "managers": ["composer"],
+            "matchPackagePatterns": ["^symplify/easy-coding-standard", "^vimeo/psalm", "^psalm/plugin-phpunit", "rector/rector"],
+            "rangeStrategy": "update-lockfile",
+            "groupName": "Tools"
+        }
+    ]
+}
