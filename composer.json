@@ -25,7 +25,7 @@
         "psr/http-client": "^1.0",
         "psr/http-client-implementation": "^1.0",
         "psr/http-factory": "^1.0",
-        "symfony/options-resolver": "^4.4 || ^5.4 || ^6"
+        "symfony/options-resolver": "^7"
     },
     "require-dev": {
         "bamarni/composer-bin-plugin": "^1.8",
@@ -33,7 +33,7 @@
         "php-http/curl-client": "^2.3",
         "php-http/mock-client": "^1.6",
         "phpunit/phpunit": "^9.5",
-        "symfony/http-client": "^6.0"
+        "symfony/http-client": "^7.0"
     },
     "config": {
         "allow-plugins": {
