@@ -9,7 +9,6 @@ use OpenDaje\UmWa\HttpClient\Builder;
 use OpenDaje\UmWa\Options;
 use OpenDaje\UmWa\UltraMsgClient;
 use PHPUnit\Framework\TestCase;
-use Psr\Http\Message\ResponseInterface;
 
 /**
  * @covers \OpenDaje\UmWa\Api\Contacts
@@ -18,23 +17,20 @@ class ContactTest extends TestCase
 {
     public function testGetContacts(): void
     {
-        self::markTestIncomplete();
         ClassDiscovery::prependStrategy(MockClientStrategy::class);
 
         $mockClient = new Client();
-
-        $response = $this->createMock(ResponseInterface::class);
-
-        $mockClient->addResponse(
-            $response
-        );
-
         $options = new Options([
-            'token' => 'xxxx',
-            'instanceId' => 'xxxx',
+            'token' => 'my-token',
+            'instanceId' => 'my-instance-id',
             'client_builder' => new Builder(httpClient: $mockClient),
         ]);
 
         $sut = new UltraMsgClient($options);
+
+        $sut->api('contacts')->getContacts();
+
+        self::assertEquals('GET', $mockClient->getLastRequest()->getMethod());
+        self::assertEquals('/my-instance-id/contacts', $mockClient->getLastRequest()->getUri()->getPath());
     }
 }

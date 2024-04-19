@@ -17,7 +17,7 @@ class UltraMsgClient
     {
         $this->options = $options ?? new Options();
 
-        $this->httpClientBuilder = $httpClientBuilder ?? new Builder();
+        $this->httpClientBuilder = $options->getClientBuilder() ?? new Builder();
     }
 
     /**

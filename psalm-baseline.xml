@@ -133,19 +133,24 @@
     </UnusedProperty>
   </file>
   <file src="src/UltraMsgClient.php">
-    <MixedAssignment>
-      <code><![CDATA[$this->httpClientBuilder]]></code>
-    </MixedAssignment>
-    <PossiblyUnusedMethod>
-      <code>api</code>
-    </PossiblyUnusedMethod>
-    <UndefinedVariable>
-      <code>$httpClientBuilder</code>
-    </UndefinedVariable>
+    <PossiblyNullReference>
+      <code>getClientBuilder</code>
+    </PossiblyNullReference>
+    <RedundantCondition>
+      <code><![CDATA[$options->getClientBuilder()]]></code>
+    </RedundantCondition>
+    <TypeDoesNotContainNull>
+      <code>new Builder()</code>
+    </TypeDoesNotContainNull>
   </file>
   <file src="tests/Unit/Api/ContactTest.php">
-    <UnusedVariable>
-      <code>$sut</code>
-    </UnusedVariable>
+    <MixedMethodCall>
+      <code>getMethod</code>
+      <code>getPath</code>
+      <code>getUri</code>
+    </MixedMethodCall>
+    <UndefinedMethod>
+      <code>getContacts</code>
+    </UndefinedMethod>
   </file>
 </files>
