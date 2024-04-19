@@ -43,7 +43,7 @@ class Contacts extends AbstractApi
      *
      * @see https://docs.ultramsg.com/api/get/contacts/blocked
      */
-    public function getBlockedContact(): array|string
+    public function getBlockedContacts(): array|string
     {
         return $this->get('/' . rawurlencode($this->getInstanceId()) . '/contacts/blocked');
     }
@@ -95,7 +95,7 @@ class Contacts extends AbstractApi
      */
     public function block(string $chatId): array|string
     {
-        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . '/chats/block', http_build_query([
+        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . '/contacts/block', http_build_query([
             'token' => $this->getToken(),
             'chatId' => $chatId,
         ]));
@@ -108,7 +108,7 @@ class Contacts extends AbstractApi
      */
     public function unblock(string $chatId): array|string
     {
-        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . '/chats/unblock', http_build_query([
+        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . '/contacts/unblock', http_build_query([
             'token' => $this->getToken(),
             'chatId' => $chatId,
         ]));
