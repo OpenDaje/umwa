@@ -28,6 +28,8 @@ class Chats extends AbstractApi
 
     /**
      * Get last message from chat conversation
+     *
+     * @see https://docs.ultramsg.com/api/get/chats/messages
      */
     public function getChatMessages(string $chatId, int $limit = 50): array|string
     {
