@@ -36,7 +36,7 @@
     <PossiblyUnusedMethod>
       <code>block</code>
       <code>checkContact</code>
-      <code>getBlockedContact</code>
+      <code>getBlockedContacts</code>
       <code>getContactImage</code>
       <code>getContactInfo</code>
       <code>getContacts</code>
@@ -145,12 +145,70 @@
   </file>
   <file src="tests/Unit/Api/ContactTest.php">
     <MixedMethodCall>
+      <code>getBody</code>
+      <code>getBody</code>
+      <code>getContents</code>
+      <code>getContents</code>
+      <code>getMethod</code>
+      <code>getMethod</code>
+      <code>getMethod</code>
+      <code>getMethod</code>
+      <code>getMethod</code>
+      <code>getMethod</code>
+      <code>getMethod</code>
+      <code>getMethod</code>
+      <code>getMethod</code>
+      <code>getMethod</code>
+      <code>getMethod</code>
       <code>getMethod</code>
       <code>getPath</code>
+      <code>getPath</code>
+      <code>getPath</code>
+      <code>getPath</code>
+      <code>getPath</code>
+      <code>getPath</code>
+      <code>getPath</code>
+      <code>getPath</code>
+      <code>getPath</code>
+      <code>getPath</code>
+      <code>getPath</code>
+      <code>getPath</code>
+      <code>getQuery</code>
+      <code>getQuery</code>
+      <code>getQuery</code>
+      <code>getQuery</code>
+      <code>getQuery</code>
+      <code>getUri</code>
+      <code>getUri</code>
+      <code>getUri</code>
+      <code>getUri</code>
+      <code>getUri</code>
+      <code>getUri</code>
+      <code>getUri</code>
+      <code>getUri</code>
+      <code>getUri</code>
+      <code>getUri</code>
+      <code>getUri</code>
+      <code>getUri</code>
+      <code>getUri</code>
+      <code>getUri</code>
+      <code>getUri</code>
+      <code>getUri</code>
       <code>getUri</code>
     </MixedMethodCall>
     <UndefinedMethod>
+      <code>block</code>
+      <code>checkContact</code>
+      <code>checkContact</code>
+      <code>getBlockedContacts</code>
+      <code>getContactImage</code>
+      <code>getContactInfo</code>
       <code>getContacts</code>
+      <code>getContactsIds</code>
+      <code>getContactsIds</code>
+      <code>getInvalidContacts</code>
+      <code>getInvalidContacts</code>
+      <code>unblock</code>
     </UndefinedMethod>
   </file>
 </files>
