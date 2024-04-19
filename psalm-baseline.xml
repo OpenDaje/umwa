@@ -289,4 +289,51 @@
       <code>unblock</code>
     </UndefinedMethod>
   </file>
+  <file src="tests/Unit/Api/GroupsTest.php">
+    <MixedMethodCall>
+      <code>getMethod</code>
+      <code>getMethod</code>
+      <code>getMethod</code>
+      <code>getMethod</code>
+      <code>getMethod</code>
+      <code>getPath</code>
+      <code>getPath</code>
+      <code>getPath</code>
+      <code>getPath</code>
+      <code>getPath</code>
+      <code>getQuery</code>
+      <code>getQuery</code>
+      <code>getQuery</code>
+      <code>getUri</code>
+      <code>getUri</code>
+      <code>getUri</code>
+      <code>getUri</code>
+      <code>getUri</code>
+      <code>getUri</code>
+      <code>getUri</code>
+      <code>getUri</code>
+    </MixedMethodCall>
+    <UndefinedInterfaceMethod>
+      <code>getLastRequest</code>
+      <code>getLastRequest</code>
+      <code>getLastRequest</code>
+      <code>getLastRequest</code>
+      <code>getLastRequest</code>
+      <code>getLastRequest</code>
+      <code>getLastRequest</code>
+      <code>getLastRequest</code>
+      <code>getLastRequest</code>
+      <code>getLastRequest</code>
+      <code>getLastRequest</code>
+      <code>getLastRequest</code>
+      <code>getLastRequest</code>
+    </UndefinedInterfaceMethod>
+    <UndefinedMethod>
+      <code>getGroupInfo</code>
+      <code>getGroupInfo</code>
+      <code>getGroups</code>
+      <code>getGroupsIds</code>
+      <code>getGroupsIds</code>
+    </UndefinedMethod>
+  </file>
 </files>
