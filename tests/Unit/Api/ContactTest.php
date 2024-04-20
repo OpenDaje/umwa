@@ -9,202 +9,121 @@ use OpenDaje\UmWa\HttpClient\Builder;
 use OpenDaje\UmWa\Options;
 use OpenDaje\UmWa\UltraMsgClient;
 use PHPUnit\Framework\TestCase;
+use Psr\Http\Client\ClientInterface;
 
 /**
  * @covers \OpenDaje\UmWa\Api\Contacts
  */
 class ContactTest extends TestCase
 {
-    public function testGetContacts(): void
+    private ClientInterface $mockClient;
+
+    private UltraMsgClient $ultraMsgClient;
+
+    protected function setUp(): void
     {
         ClassDiscovery::prependStrategy(MockClientStrategy::class);
 
-        $mockClient = new Client();
+        $this->mockClient = new Client();
         $options = new Options([
             'token' => 'my-token',
             'instanceId' => 'my-instance-id',
-            'client_builder' => new Builder(httpClient: $mockClient),
+            'client_builder' => new Builder(httpClient: $this->mockClient),
         ]);
+        $this->ultraMsgClient = new UltraMsgClient($options);
+    }
 
-        $sut = new UltraMsgClient($options);
+    public function testGetContacts(): void
+    {
+        $this->ultraMsgClient->api('contacts')->getContacts();
 
-        $sut->api('contacts')->getContacts();
-
-        self::assertEquals('GET', $mockClient->getLastRequest()->getMethod());
-        self::assertEquals('/my-instance-id/contacts', $mockClient->getLastRequest()->getUri()->getPath());
+        self::assertEquals('GET', $this->mockClient->getLastRequest()->getMethod());
+        self::assertEquals('/my-instance-id/contacts', $this->mockClient->getLastRequest()->getUri()->getPath());
     }
 
     public function testGetContactsIds(): void
     {
-        ClassDiscovery::prependStrategy(MockClientStrategy::class);
+        $this->ultraMsgClient->api('contacts')->getContactsIds();
 
-        $mockClient = new Client();
-        $options = new Options([
-            'token' => 'my-token',
-            'instanceId' => 'my-instance-id',
-            'client_builder' => new Builder(httpClient: $mockClient),
-        ]);
+        self::assertEquals('GET', $this->mockClient->getLastRequest()->getMethod());
+        self::assertEquals('/my-instance-id/contacts/ids', $this->mockClient->getLastRequest()->getUri()->getPath());
 
-        $sut = new UltraMsgClient($options);
+        $this->ultraMsgClient->api('contacts')->getContactsIds(true);
 
-        $sut->api('contacts')->getContactsIds();
-
-        self::assertEquals('GET', $mockClient->getLastRequest()->getMethod());
-        self::assertEquals('/my-instance-id/contacts/ids', $mockClient->getLastRequest()->getUri()->getPath());
-
-        $sut->api('contacts')->getContactsIds(true);
-
-        self::assertEquals('GET', $mockClient->getLastRequest()->getMethod());
-        self::assertEquals('/my-instance-id/contacts/ids', $mockClient->getLastRequest()->getUri()->getPath());
-        self::assertEquals('clear=1&token=my-token', $mockClient->getLastRequest()->getUri()->getQuery());
+        self::assertEquals('GET', $this->mockClient->getLastRequest()->getMethod());
+        self::assertEquals('/my-instance-id/contacts/ids', $this->mockClient->getLastRequest()->getUri()->getPath());
+        self::assertEquals('clear=1&token=my-token', $this->mockClient->getLastRequest()->getUri()->getQuery());
     }
 
     public function testGetContactInfo(): void
     {
-        ClassDiscovery::prependStrategy(MockClientStrategy::class);
+        $this->ultraMsgClient->api('contacts')->getContactInfo('123456789');
 
-        $mockClient = new Client();
-        $options = new Options([
-            'token' => 'my-token',
-            'instanceId' => 'my-instance-id',
-            'client_builder' => new Builder(httpClient: $mockClient),
-        ]);
-
-        $sut = new UltraMsgClient($options);
-
-        $sut->api('contacts')->getContactInfo('123456789');
-
-        self::assertEquals('GET', $mockClient->getLastRequest()->getMethod());
-        self::assertEquals('/my-instance-id/contacts/contact', $mockClient->getLastRequest()->getUri()->getPath());
-        self::assertEquals('chatId=123456789&token=my-token', $mockClient->getLastRequest()->getUri()->getQuery());
+        self::assertEquals('GET', $this->mockClient->getLastRequest()->getMethod());
+        self::assertEquals('/my-instance-id/contacts/contact', $this->mockClient->getLastRequest()->getUri()->getPath());
+        self::assertEquals('chatId=123456789&token=my-token', $this->mockClient->getLastRequest()->getUri()->getQuery());
     }
 
     public function testGetBlockedContacts(): void
     {
-        ClassDiscovery::prependStrategy(MockClientStrategy::class);
+        $this->ultraMsgClient->api('contacts')->getBlockedContacts();
 
-        $mockClient = new Client();
-        $options = new Options([
-            'token' => 'my-token',
-            'instanceId' => 'my-instance-id',
-            'client_builder' => new Builder(httpClient: $mockClient),
-        ]);
-
-        $sut = new UltraMsgClient($options);
-
-        $sut->api('contacts')->getBlockedContacts();
-
-        self::assertEquals('GET', $mockClient->getLastRequest()->getMethod());
-        self::assertEquals('/my-instance-id/contacts/blocked', $mockClient->getLastRequest()->getUri()->getPath());
+        self::assertEquals('GET', $this->mockClient->getLastRequest()->getMethod());
+        self::assertEquals('/my-instance-id/contacts/blocked', $this->mockClient->getLastRequest()->getUri()->getPath());
     }
 
     public function testGetInvalidContacts(): void
     {
-        ClassDiscovery::prependStrategy(MockClientStrategy::class);
+        $this->ultraMsgClient->api('contacts')->getInvalidContacts();
 
-        $mockClient = new Client();
-        $options = new Options([
-            'token' => 'my-token',
-            'instanceId' => 'my-instance-id',
-            'client_builder' => new Builder(httpClient: $mockClient),
-        ]);
+        self::assertEquals('GET', $this->mockClient->getLastRequest()->getMethod());
+        self::assertEquals('/my-instance-id/contacts/invalid', $this->mockClient->getLastRequest()->getUri()->getPath());
 
-        $sut = new UltraMsgClient($options);
+        $this->ultraMsgClient->api('contacts')->getInvalidContacts(true);
 
-        $sut->api('contacts')->getInvalidContacts();
-
-        self::assertEquals('GET', $mockClient->getLastRequest()->getMethod());
-        self::assertEquals('/my-instance-id/contacts/invalid', $mockClient->getLastRequest()->getUri()->getPath());
-
-        $sut->api('contacts')->getInvalidContacts(true);
-
-        self::assertEquals('GET', $mockClient->getLastRequest()->getMethod());
-        self::assertEquals('/my-instance-id/contacts/invalid', $mockClient->getLastRequest()->getUri()->getPath());
-        self::assertEquals('clear=1&token=my-token', $mockClient->getLastRequest()->getUri()->getQuery());
+        self::assertEquals('GET', $this->mockClient->getLastRequest()->getMethod());
+        self::assertEquals('/my-instance-id/contacts/invalid', $this->mockClient->getLastRequest()->getUri()->getPath());
+        self::assertEquals('clear=1&token=my-token', $this->mockClient->getLastRequest()->getUri()->getQuery());
     }
 
     public function testCheckContact(): void
     {
-        ClassDiscovery::prependStrategy(MockClientStrategy::class);
+        $this->ultraMsgClient->api('contacts')->checkContact('123456789');
 
-        $mockClient = new Client();
-        $options = new Options([
-            'token' => 'my-token',
-            'instanceId' => 'my-instance-id',
-            'client_builder' => new Builder(httpClient: $mockClient),
-        ]);
+        self::assertEquals('GET', $this->mockClient->getLastRequest()->getMethod());
+        self::assertEquals('/my-instance-id/contacts/check', $this->mockClient->getLastRequest()->getUri()->getPath());
+        self::assertEquals('chatId=123456789&nocache=0&token=my-token', $this->mockClient->getLastRequest()->getUri()->getQuery());
 
-        $sut = new UltraMsgClient($options);
+        $this->ultraMsgClient->api('contacts')->checkContact('123456789', true);
 
-        $sut->api('contacts')->checkContact('123456789');
-
-        self::assertEquals('GET', $mockClient->getLastRequest()->getMethod());
-        self::assertEquals('/my-instance-id/contacts/check', $mockClient->getLastRequest()->getUri()->getPath());
-        self::assertEquals('chatId=123456789&nocache=0&token=my-token', $mockClient->getLastRequest()->getUri()->getQuery());
-
-        $sut->api('contacts')->checkContact('123456789', true);
-
-        self::assertEquals('GET', $mockClient->getLastRequest()->getMethod());
-        self::assertEquals('/my-instance-id/contacts/check', $mockClient->getLastRequest()->getUri()->getPath());
-        self::assertEquals('chatId=123456789&nocache=1&token=my-token', $mockClient->getLastRequest()->getUri()->getQuery());
+        self::assertEquals('GET', $this->mockClient->getLastRequest()->getMethod());
+        self::assertEquals('/my-instance-id/contacts/check', $this->mockClient->getLastRequest()->getUri()->getPath());
+        self::assertEquals('chatId=123456789&nocache=1&token=my-token', $this->mockClient->getLastRequest()->getUri()->getQuery());
     }
 
     public function testContactImage(): void
     {
-        ClassDiscovery::prependStrategy(MockClientStrategy::class);
+        $this->ultraMsgClient->api('contacts')->getContactImage('123456789');
 
-        $mockClient = new Client();
-        $options = new Options([
-            'token' => 'my-token',
-            'instanceId' => 'my-instance-id',
-            'client_builder' => new Builder(httpClient: $mockClient),
-        ]);
-
-        $sut = new UltraMsgClient($options);
-
-        $sut->api('contacts')->getContactImage('123456789');
-
-        self::assertEquals('GET', $mockClient->getLastRequest()->getMethod());
-        self::assertEquals('/my-instance-id/contacts/image', $mockClient->getLastRequest()->getUri()->getPath());
+        self::assertEquals('GET', $this->mockClient->getLastRequest()->getMethod());
+        self::assertEquals('/my-instance-id/contacts/image', $this->mockClient->getLastRequest()->getUri()->getPath());
     }
 
     public function testBlockContact(): void
     {
-        ClassDiscovery::prependStrategy(MockClientStrategy::class);
+        $this->ultraMsgClient->api('contacts')->block('123456789');
 
-        $mockClient = new Client();
-        $options = new Options([
-            'token' => 'my-token',
-            'instanceId' => 'my-instance-id',
-            'client_builder' => new Builder(httpClient: $mockClient),
-        ]);
-
-        $sut = new UltraMsgClient($options);
-
-        $sut->api('contacts')->block('123456789');
-
-        self::assertEquals('POST', $mockClient->getLastRequest()->getMethod());
-        self::assertEquals('/my-instance-id/contacts/block', $mockClient->getLastRequest()->getUri()->getPath());
-        self::assertEquals('token=my-token&chatId=123456789', ($mockClient->getLastRequest()->getBody())->getContents());
+        self::assertEquals('POST', $this->mockClient->getLastRequest()->getMethod());
+        self::assertEquals('/my-instance-id/contacts/block', $this->mockClient->getLastRequest()->getUri()->getPath());
+        self::assertEquals('token=my-token&chatId=123456789', ($this->mockClient->getLastRequest()->getBody())->getContents());
     }
 
     public function testUnblockContact(): void
     {
-        ClassDiscovery::prependStrategy(MockClientStrategy::class);
+        $this->ultraMsgClient->api('contacts')->unblock('123456789');
 
-        $mockClient = new Client();
-        $options = new Options([
-            'token' => 'my-token',
-            'instanceId' => 'my-instance-id',
-            'client_builder' => new Builder(httpClient: $mockClient),
-        ]);
-
-        $sut = new UltraMsgClient($options);
-
-        $sut->api('contacts')->unblock('123456789');
-
-        self::assertEquals('POST', $mockClient->getLastRequest()->getMethod());
-        self::assertEquals('/my-instance-id/contacts/unblock', $mockClient->getLastRequest()->getUri()->getPath());
-        self::assertEquals('token=my-token&chatId=123456789', ($mockClient->getLastRequest()->getBody())->getContents());
+        self::assertEquals('POST', $this->mockClient->getLastRequest()->getMethod());
+        self::assertEquals('/my-instance-id/contacts/unblock', $this->mockClient->getLastRequest()->getUri()->getPath());
+        self::assertEquals('token=my-token&chatId=123456789', ($this->mockClient->getLastRequest()->getBody())->getContents());
     }
 }
