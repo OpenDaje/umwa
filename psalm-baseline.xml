@@ -419,4 +419,39 @@
       <code>settings</code>
     </UndefinedMethod>
   </file>
+  <file src="tests/Unit/Api/MediaTest.php">
+    <MixedMethodCall>
+      <code>getBody</code>
+      <code>getBody</code>
+      <code>getBody</code>
+      <code>getContents</code>
+      <code>getContents</code>
+      <code>getContents</code>
+      <code>getMethod</code>
+      <code>getMethod</code>
+      <code>getMethod</code>
+      <code>getPath</code>
+      <code>getPath</code>
+      <code>getPath</code>
+      <code>getUri</code>
+      <code>getUri</code>
+      <code>getUri</code>
+    </MixedMethodCall>
+    <UndefinedInterfaceMethod>
+      <code>getLastRequest</code>
+      <code>getLastRequest</code>
+      <code>getLastRequest</code>
+      <code>getLastRequest</code>
+      <code>getLastRequest</code>
+      <code>getLastRequest</code>
+      <code>getLastRequest</code>
+      <code>getLastRequest</code>
+      <code>getLastRequest</code>
+    </UndefinedInterfaceMethod>
+    <UndefinedMethod>
+      <code>deleteByDate</code>
+      <code>deleteMedia</code>
+      <code>upload</code>
+    </UndefinedMethod>
+  </file>
 </files>
