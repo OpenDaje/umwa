@@ -1,96 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.15.0@5c774aca4746caf3d239d9c8cadb9f882ca29352">
+<files psalm-version="5.23.1@8471a896ccea3526b26d082f4461eeea467f10a4">
   <file src="src/Api/AbstractApi.php">
     <PossiblyNullArgument>
       <code><![CDATA[$this->createJsonBody($parameters)]]></code>
     </PossiblyNullArgument>
     <PossiblyUnusedMethod>
-      <code>configure</code>
-      <code>delete</code>
-      <code>getClient</code>
-      <code>head</code>
-      <code>patch</code>
-      <code>post</code>
-      <code>put</code>
+      <code><![CDATA[configure]]></code>
+      <code><![CDATA[delete]]></code>
+      <code><![CDATA[getClient]]></code>
+      <code><![CDATA[head]]></code>
+      <code><![CDATA[patch]]></code>
+      <code><![CDATA[post]]></code>
+      <code><![CDATA[put]]></code>
     </PossiblyUnusedMethod>
     <RedundantCondition>
-      <code>0</code>
+      <code><![CDATA[0]]></code>
     </RedundantCondition>
     <TypeDoesNotContainType>
-      <code>empty($parameters)</code>
+      <code><![CDATA[empty($parameters)]]></code>
+      <code><![CDATA[empty($parameters)]]></code>
     </TypeDoesNotContainType>
   </file>
   <file src="src/Api/Chats.php">
     <PossiblyUnusedMethod>
-      <code>archiveChat</code>
-      <code>clearMessages</code>
-      <code>deleteChat</code>
-      <code>getChatMessages</code>
-      <code>getChats</code>
-      <code>getChatsIds</code>
-      <code>markAsReaded</code>
-      <code>unarchiveChat</code>
+      <code><![CDATA[archiveChat]]></code>
+      <code><![CDATA[clearMessages]]></code>
+      <code><![CDATA[deleteChat]]></code>
+      <code><![CDATA[getChatMessages]]></code>
+      <code><![CDATA[getChats]]></code>
+      <code><![CDATA[getChatsIds]]></code>
+      <code><![CDATA[markAsReaded]]></code>
+      <code><![CDATA[unarchiveChat]]></code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Api/Contacts.php">
     <PossiblyUnusedMethod>
-      <code>block</code>
-      <code>checkContact</code>
-      <code>getBlockedContacts</code>
-      <code>getContactImage</code>
-      <code>getContactInfo</code>
-      <code>getContacts</code>
-      <code>getContactsIds</code>
-      <code>getInvalidContacts</code>
-      <code>unblock</code>
+      <code><![CDATA[block]]></code>
+      <code><![CDATA[checkContact]]></code>
+      <code><![CDATA[getBlockedContacts]]></code>
+      <code><![CDATA[getContactImage]]></code>
+      <code><![CDATA[getContactInfo]]></code>
+      <code><![CDATA[getContacts]]></code>
+      <code><![CDATA[getContactsIds]]></code>
+      <code><![CDATA[getInvalidContacts]]></code>
+      <code><![CDATA[unblock]]></code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Api/Groups.php">
     <PossiblyUnusedMethod>
-      <code>getGroupInfo</code>
-      <code>getGroups</code>
-      <code>getGroupsIds</code>
+      <code><![CDATA[getGroupInfo]]></code>
+      <code><![CDATA[getGroups]]></code>
+      <code><![CDATA[getGroupsIds]]></code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Api/Instance.php">
     <PossiblyUnusedMethod>
-      <code>clear</code>
-      <code>getConnectedPhoneInfo</code>
-      <code>getQR</code>
-      <code>getQrCode</code>
-      <code>getSettings</code>
-      <code>getStatus</code>
-      <code>logout</code>
-      <code>restart</code>
-      <code>settings</code>
+      <code><![CDATA[clear]]></code>
+      <code><![CDATA[getConnectedPhoneInfo]]></code>
+      <code><![CDATA[getQR]]></code>
+      <code><![CDATA[getQrCode]]></code>
+      <code><![CDATA[getSettings]]></code>
+      <code><![CDATA[getStatus]]></code>
+      <code><![CDATA[logout]]></code>
+      <code><![CDATA[restart]]></code>
+      <code><![CDATA[settings]]></code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Api/Media.php">
     <PossiblyUnusedMethod>
-      <code>deleteByDate</code>
-      <code>deleteMedia</code>
-      <code>upload</code>
+      <code><![CDATA[deleteByDate]]></code>
+      <code><![CDATA[deleteMedia]]></code>
+      <code><![CDATA[upload]]></code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Api/Messages.php">
     <PossiblyUnusedMethod>
-      <code>clear</code>
-      <code>deleteMessage</code>
-      <code>getMessages</code>
-      <code>getStatistics</code>
-      <code>resendById</code>
-      <code>resendByStatus</code>
-      <code>sendAudioMessage</code>
-      <code>sendChatMessage</code>
-      <code>sendContact</code>
-      <code>sendDocumentMessage</code>
-      <code>sendImageMessage</code>
-      <code>sendLocation</code>
-      <code>sendReaction</code>
-      <code>sendStickerMessage</code>
-      <code>sendVcard</code>
-      <code>sendVideoMessage</code>
-      <code>sendVoiceMessage</code>
+      <code><![CDATA[clear]]></code>
+      <code><![CDATA[deleteMessage]]></code>
+      <code><![CDATA[getMessages]]></code>
+      <code><![CDATA[getStatistics]]></code>
+      <code><![CDATA[resendById]]></code>
+      <code><![CDATA[resendByStatus]]></code>
+      <code><![CDATA[sendAudioMessage]]></code>
+      <code><![CDATA[sendChatMessage]]></code>
+      <code><![CDATA[sendContact]]></code>
+      <code><![CDATA[sendDocumentMessage]]></code>
+      <code><![CDATA[sendImageMessage]]></code>
+      <code><![CDATA[sendLocation]]></code>
+      <code><![CDATA[sendReaction]]></code>
+      <code><![CDATA[sendStickerMessage]]></code>
+      <code><![CDATA[sendVcard]]></code>
+      <code><![CDATA[sendVideoMessage]]></code>
+      <code><![CDATA[sendVoiceMessage]]></code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src/HttpClient/Builder.php">
@@ -103,21 +104,21 @@
   </file>
   <file src="src/Message/ResponseMediator.php">
     <MixedAssignment>
-      <code>$content</code>
+      <code><![CDATA[$content]]></code>
     </MixedAssignment>
     <PossiblyUnusedMethod>
-      <code>getPagination</code>
+      <code><![CDATA[getPagination]]></code>
     </PossiblyUnusedMethod>
     <UnnecessaryVarAnnotation>
-      <code>string[]</code>
+      <code><![CDATA[string[]]]></code>
     </UnnecessaryVarAnnotation>
   </file>
   <file src="src/Options.php">
     <MixedInferredReturnType>
-      <code>Builder</code>
-      <code>UriFactoryInterface</code>
-      <code>string</code>
-      <code>string</code>
+      <code><![CDATA[Builder]]></code>
+      <code><![CDATA[UriFactoryInterface]]></code>
+      <code><![CDATA[string]]></code>
+      <code><![CDATA[string]]></code>
     </MixedInferredReturnType>
     <MixedPropertyTypeCoercion>
       <code><![CDATA[$this->resolver->resolve($options)]]></code>
@@ -129,329 +130,329 @@
       <code><![CDATA[$this->options['uri_factory']]]></code>
     </MixedReturnStatement>
     <UnusedProperty>
-      <code>$resolver</code>
+      <code><![CDATA[$resolver]]></code>
     </UnusedProperty>
   </file>
   <file src="src/UltraMsgClient.php">
     <PossiblyNullReference>
-      <code>getClientBuilder</code>
+      <code><![CDATA[getClientBuilder]]></code>
     </PossiblyNullReference>
     <RedundantCondition>
       <code><![CDATA[$options->getClientBuilder()]]></code>
     </RedundantCondition>
     <TypeDoesNotContainNull>
-      <code>new Builder()</code>
+      <code><![CDATA[new Builder()]]></code>
     </TypeDoesNotContainNull>
   </file>
   <file src="tests/Unit/Api/ChatsTest.php">
     <MixedMethodCall>
-      <code>getBody</code>
-      <code>getBody</code>
-      <code>getBody</code>
-      <code>getBody</code>
-      <code>getContents</code>
-      <code>getContents</code>
-      <code>getContents</code>
-      <code>getContents</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getQuery</code>
-      <code>getQuery</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
+      <code><![CDATA[getBody]]></code>
+      <code><![CDATA[getBody]]></code>
+      <code><![CDATA[getBody]]></code>
+      <code><![CDATA[getBody]]></code>
+      <code><![CDATA[getContents]]></code>
+      <code><![CDATA[getContents]]></code>
+      <code><![CDATA[getContents]]></code>
+      <code><![CDATA[getContents]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getQuery]]></code>
+      <code><![CDATA[getQuery]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
     </MixedMethodCall>
     <UndefinedInterfaceMethod>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
     </UndefinedInterfaceMethod>
     <UndefinedMethod>
-      <code>clearMessages</code>
-      <code>deleteChat</code>
-      <code>getChatMessages</code>
-      <code>getChatMessages</code>
-      <code>getChats</code>
-      <code>getChatsIds</code>
-      <code>getChatsIds</code>
-      <code>unarchiveChat</code>
-      <code>unarchiveChat</code>
+      <code><![CDATA[clearMessages]]></code>
+      <code><![CDATA[deleteChat]]></code>
+      <code><![CDATA[getChatMessages]]></code>
+      <code><![CDATA[getChatMessages]]></code>
+      <code><![CDATA[getChats]]></code>
+      <code><![CDATA[getChatsIds]]></code>
+      <code><![CDATA[getChatsIds]]></code>
+      <code><![CDATA[unarchiveChat]]></code>
+      <code><![CDATA[unarchiveChat]]></code>
     </UndefinedMethod>
   </file>
   <file src="tests/Unit/Api/ContactTest.php">
     <MixedMethodCall>
-      <code>getBody</code>
-      <code>getBody</code>
-      <code>getContents</code>
-      <code>getContents</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getQuery</code>
-      <code>getQuery</code>
-      <code>getQuery</code>
-      <code>getQuery</code>
-      <code>getQuery</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
+      <code><![CDATA[getBody]]></code>
+      <code><![CDATA[getBody]]></code>
+      <code><![CDATA[getContents]]></code>
+      <code><![CDATA[getContents]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getQuery]]></code>
+      <code><![CDATA[getQuery]]></code>
+      <code><![CDATA[getQuery]]></code>
+      <code><![CDATA[getQuery]]></code>
+      <code><![CDATA[getQuery]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
     </MixedMethodCall>
     <UndefinedMethod>
-      <code>block</code>
-      <code>checkContact</code>
-      <code>checkContact</code>
-      <code>getBlockedContacts</code>
-      <code>getContactImage</code>
-      <code>getContactInfo</code>
-      <code>getContacts</code>
-      <code>getContactsIds</code>
-      <code>getContactsIds</code>
-      <code>getInvalidContacts</code>
-      <code>getInvalidContacts</code>
-      <code>unblock</code>
+      <code><![CDATA[block]]></code>
+      <code><![CDATA[checkContact]]></code>
+      <code><![CDATA[checkContact]]></code>
+      <code><![CDATA[getBlockedContacts]]></code>
+      <code><![CDATA[getContactImage]]></code>
+      <code><![CDATA[getContactInfo]]></code>
+      <code><![CDATA[getContacts]]></code>
+      <code><![CDATA[getContactsIds]]></code>
+      <code><![CDATA[getContactsIds]]></code>
+      <code><![CDATA[getInvalidContacts]]></code>
+      <code><![CDATA[getInvalidContacts]]></code>
+      <code><![CDATA[unblock]]></code>
     </UndefinedMethod>
   </file>
   <file src="tests/Unit/Api/GroupsTest.php">
     <MixedMethodCall>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getQuery</code>
-      <code>getQuery</code>
-      <code>getQuery</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getQuery]]></code>
+      <code><![CDATA[getQuery]]></code>
+      <code><![CDATA[getQuery]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
     </MixedMethodCall>
     <UndefinedInterfaceMethod>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
     </UndefinedInterfaceMethod>
     <UndefinedMethod>
-      <code>getGroupInfo</code>
-      <code>getGroupInfo</code>
-      <code>getGroups</code>
-      <code>getGroupsIds</code>
-      <code>getGroupsIds</code>
+      <code><![CDATA[getGroupInfo]]></code>
+      <code><![CDATA[getGroupInfo]]></code>
+      <code><![CDATA[getGroups]]></code>
+      <code><![CDATA[getGroupsIds]]></code>
+      <code><![CDATA[getGroupsIds]]></code>
     </UndefinedMethod>
   </file>
   <file src="tests/Unit/Api/InstanceTest.php">
     <MixedMethodCall>
-      <code>getBody</code>
-      <code>getBody</code>
-      <code>getBody</code>
-      <code>getBody</code>
-      <code>getBody</code>
-      <code>getContents</code>
-      <code>getContents</code>
-      <code>getContents</code>
-      <code>getContents</code>
-      <code>getContents</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
+      <code><![CDATA[getBody]]></code>
+      <code><![CDATA[getBody]]></code>
+      <code><![CDATA[getBody]]></code>
+      <code><![CDATA[getBody]]></code>
+      <code><![CDATA[getBody]]></code>
+      <code><![CDATA[getContents]]></code>
+      <code><![CDATA[getContents]]></code>
+      <code><![CDATA[getContents]]></code>
+      <code><![CDATA[getContents]]></code>
+      <code><![CDATA[getContents]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
     </MixedMethodCall>
     <UndefinedInterfaceMethod>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
     </UndefinedInterfaceMethod>
     <UndefinedMethod>
-      <code>clear</code>
-      <code>getConnectedPhoneInfo</code>
-      <code>getQR</code>
-      <code>getQrCode</code>
-      <code>getSettings</code>
-      <code>getStatus</code>
-      <code>logout</code>
-      <code>restart</code>
-      <code>settings</code>
-      <code>settings</code>
+      <code><![CDATA[clear]]></code>
+      <code><![CDATA[getConnectedPhoneInfo]]></code>
+      <code><![CDATA[getQR]]></code>
+      <code><![CDATA[getQrCode]]></code>
+      <code><![CDATA[getSettings]]></code>
+      <code><![CDATA[getStatus]]></code>
+      <code><![CDATA[logout]]></code>
+      <code><![CDATA[restart]]></code>
+      <code><![CDATA[settings]]></code>
+      <code><![CDATA[settings]]></code>
     </UndefinedMethod>
   </file>
   <file src="tests/Unit/Api/MediaTest.php">
     <MixedMethodCall>
-      <code>getBody</code>
-      <code>getBody</code>
-      <code>getBody</code>
-      <code>getContents</code>
-      <code>getContents</code>
-      <code>getContents</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getMethod</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getPath</code>
-      <code>getUri</code>
-      <code>getUri</code>
-      <code>getUri</code>
+      <code><![CDATA[getBody]]></code>
+      <code><![CDATA[getBody]]></code>
+      <code><![CDATA[getBody]]></code>
+      <code><![CDATA[getContents]]></code>
+      <code><![CDATA[getContents]]></code>
+      <code><![CDATA[getContents]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getMethod]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getPath]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
+      <code><![CDATA[getUri]]></code>
     </MixedMethodCall>
     <UndefinedInterfaceMethod>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
-      <code>getLastRequest</code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
+      <code><![CDATA[getLastRequest]]></code>
     </UndefinedInterfaceMethod>
     <UndefinedMethod>
-      <code>deleteByDate</code>
-      <code>deleteMedia</code>
-      <code>upload</code>
+      <code><![CDATA[deleteByDate]]></code>
+      <code><![CDATA[deleteMedia]]></code>
+      <code><![CDATA[upload]]></code>
     </UndefinedMethod>
   </file>
 </files>
