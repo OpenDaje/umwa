@@ -1,8 +1,7 @@
 /.idea
 /.vscode
 
-.phpunit.cache/
-
+/example
 /tools/**/vendor
 /var
 /vendor/
