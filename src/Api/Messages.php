@@ -112,7 +112,7 @@ class Messages extends AbstractApi
      */
     public function sendDocumentMessage(string $to, string $filename, string $document, string $caption = '', int $priority = 10, string $referenceId = '', bool $noCache = false, string $msgId = '', string $mentions = ''): array|string
     {
-        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . '/messages/image', http_build_query([
+        return $this->postRaw('/' . rawurlencode($this->getInstanceId()) . '/messages/document', http_build_query([
             'token' => $this->getToken(),
             'to' => $to,
             'filename' => $filename,
