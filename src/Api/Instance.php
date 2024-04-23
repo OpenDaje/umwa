@@ -6,10 +6,9 @@ class Instance extends AbstractApi
 {
     /**
      * Get the instance status
+     * @see https://docs.ultramsg.com/api/get/instance/status
      *
      * Example: initialize|qr|retrying|loading|authenticated|disconnected|standby
-     *
-     * @see https://docs.ultramsg.com/api/get/instance/status
      */
     public function getStatus(): array|string
     {
@@ -18,6 +17,7 @@ class Instance extends AbstractApi
 
     /**
      * Get instance settings
+     * @see https://docs.ultramsg.com/api/get/instance/settings
      *
      * sendDelay : Delay in seconds between sending message, Default 1 second
      * webhook_url : Http or https URL for receiving notifications.
@@ -25,8 +25,6 @@ class Instance extends AbstractApi
      * webhook_message_create : on/off notifications in webhooks when message create.
      * webhook_message_ack : on/off ack (message delivered and message viewed) notifications in webhooks.
      * webhook_message_download_media : on/off to get received document / media files.
-     *
-     * @see https://docs.ultramsg.com/api/get/instance/settings
      */
     public function getSettings(): array|string
     {
@@ -35,7 +33,6 @@ class Instance extends AbstractApi
 
     /**
      * Get QR image for authentication
-     *
      * @see https://docs.ultramsg.com/api/get/instance/qr
      */
     public function getQR(): array|string
@@ -45,7 +42,6 @@ class Instance extends AbstractApi
 
     /**
      * Get QR code for authentication
-     *
      * @see https://docs.ultramsg.com/api/get/instance/qrCode
      */
     public function getQrCode(): array|string
@@ -55,7 +51,6 @@ class Instance extends AbstractApi
 
     /**
      * Get connected phone informations
-     *
      * @see https://docs.ultramsg.com/api/get/instance/me
      */
     public function getConnectedPhoneInfo(): array|string
@@ -65,7 +60,6 @@ class Instance extends AbstractApi
 
     /**
      * Logout from WhatsApp Web to get new QR code.
-     *
      * @see https://docs.ultramsg.com/api/post/instance/logout
      */
     public function logout(): array|string
@@ -80,7 +74,6 @@ class Instance extends AbstractApi
 
     /**
      * Restart your WhatsApp instance.
-     *
      * @see https://docs.ultramsg.com/api/post/instance/restart
      */
     public function restart(): array|string
@@ -95,8 +88,17 @@ class Instance extends AbstractApi
 
     /**
      * Update instance settings
-     *
      * @see https://docs.ultramsg.com/api/post/instance/settings
+     *
+     * @param int $sendDelay Delay in seconds between sending message, Default 1 secondDelay in seconds between sending message .
+     *
+     * @param string $webhookUrl Http or https URL for receiving notifications .
+     *
+     * @param string $webhookMessageReceived true/false notifications in webhooks when message received .
+     *
+     * @param string $webhookMessageCreate true/false notifications in webhooks when message create .
+     *
+     * @param string $webhookMessageAck true/false ack (message delivered and message viewed) notifications in webhooks .
      */
     public function settings(int $sendDelay = 1, string $webhookUrl = '', string $webhookMessageReceived = '', string $webhookMessageCreate = '', string $webhookMessageAck = '', string $webhookMessageDownloadMedia = ''): array|string
     {

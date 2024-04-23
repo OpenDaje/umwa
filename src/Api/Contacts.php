@@ -6,7 +6,6 @@ class Contacts extends AbstractApi
 {
     /**
      * Get the contacts list
-     *
      * @see https://docs.ultramsg.com/api/get/contacts
      */
     public function getContacts(): array|string
@@ -16,7 +15,6 @@ class Contacts extends AbstractApi
 
     /**
      * Get the contacts id's
-     *
      * @see https://docs.ultramsg.com/api/get/contacts/ids
      */
     public function getContactsIds(bool $clearIds = false): array|string
@@ -28,8 +26,9 @@ class Contacts extends AbstractApi
 
     /**
      * Get contact info
-     *
      * @see https://docs.ultramsg.com/api/get/contacts/contact
+     *
+     * @param string $chatId chatID for contact e.g 14155552671@c.us
      */
     public function getContactInfo(string $chatId): array|string
     {
@@ -40,7 +39,6 @@ class Contacts extends AbstractApi
 
     /**
      * Gets all blocked contacts
-     *
      * @see https://docs.ultramsg.com/api/get/contacts/blocked
      */
     public function getBlockedContacts(): array|string
@@ -50,12 +48,10 @@ class Contacts extends AbstractApi
 
     /**
      * Gets all invalid contacts
-     *
      * @see https://docs.ultramsg.com/api/get/contacts/invalid
      */
     public function getInvalidContacts(bool $clearIds = false): array|string
     {
-        //TODO INVESTIGATE clear param (delete contact? or delete the id from a chat group)
         return $this->get('/' . rawurlencode($this->getInstanceId()) . '/contacts/invalid', [
             'clear' => $clearIds,
         ]);
@@ -63,8 +59,9 @@ class Contacts extends AbstractApi
 
     /**
      * Check if number is WhatsApp user
-     *
      * @see https://docs.ultramsg.com/api/get/contacts/check
+     *
+     * @param string $chatId chatID for contact e.g 14155552671@c.us
      *
      * @param bool $noCache Whether to check the contacts cache or not. Contact information is normally cached for 3 days. By setting the nocache parameter to true, the cache will be bypassed ensuring a check is performed.
      */
@@ -78,8 +75,9 @@ class Contacts extends AbstractApi
 
     /**
      * Get contact profile picture
-     *
      * @see https://docs.ultramsg.com/api/get/contacts/image
+     *
+     * @param string $chatId chatID for contact e.g 14155552671@c.us
      */
     public function getContactImage(string $chatId): array|string
     {
@@ -90,8 +88,9 @@ class Contacts extends AbstractApi
 
     /**
      * block contact from WhatsApp
-     *
      * @see https://docs.ultramsg.com/api/post/contacts/block
+     *
+     * @param string $chatId chatID for contact e.g 14155552671@c.us
      */
     public function block(string $chatId): array|string
     {
@@ -103,8 +102,9 @@ class Contacts extends AbstractApi
 
     /**
      * Unblock contact from WhatsApp
-     *
      * @see https://docs.ultramsg.com/api/post/contacts/unblock
+     *
+     * @param string $chatId chatID for contact e.g 14155552671@c.us
      */
     public function unblock(string $chatId): array|string
     {

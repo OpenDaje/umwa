@@ -6,8 +6,9 @@ class Media extends AbstractApi
 {
     /**
      * Upload Media
-     *
      * @see https://docs.ultramsg.com/api/post/media/upload
+     *
+     * @param string $file from url or from your local device
      */
     public function upload(string $file): array|string
     {
@@ -19,8 +20,9 @@ class Media extends AbstractApi
 
     /**
      * Delete Media
-     *
      * @see https://docs.ultramsg.com/api/post/media/delete
+     *
+     * @param string $url the url of the media file
      */
     public function deleteMedia(string $url): array|string
     {
@@ -32,7 +34,6 @@ class Media extends AbstractApi
 
     /**
      * Delete all media files by date
-     *
      * @see https://docs.ultramsg.com/api/post/media/deleteByDate
      *
      * @param string $date month and year for example: 1-2023 or 01-2023

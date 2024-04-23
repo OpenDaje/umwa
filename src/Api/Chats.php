@@ -6,7 +6,6 @@ class Chats extends AbstractApi
 {
     /**
      * Get the chats list
-     *
      * @see https://docs.ultramsg.com/api/get/chats
      */
     public function getChats(): array|string
@@ -16,7 +15,6 @@ class Chats extends AbstractApi
 
     /**
      * Get the chats id's
-     *
      * @see https://docs.ultramsg.com/api/get/chats/ids
      */
     public function getChatsIds(bool $clearIds = false): array|string
@@ -28,8 +26,12 @@ class Chats extends AbstractApi
 
     /**
      * Get last message from chat conversation
-     *
      * @see https://docs.ultramsg.com/api/get/chats/messages
+     *
+     * @param string $chatId chatID for contact or group e.g 14155552671@c.us or 14155552671-441234567890@g.us
+     *
+     * @param int $limit number of messages per request .
+     * max value : 1000 .
      */
     public function getChatMessages(string $chatId, int $limit = 50): array|string
     {
@@ -41,8 +43,9 @@ class Chats extends AbstractApi
 
     /**
      * Archive chat from chat list
-     *
      * @see https://docs.ultramsg.com/api/post/chats/archive
+     *
+     * @param string $chatId chatID for contact or group e.g 14155552671@c.us or 14155552671-441234567890@g.us
      */
     public function archiveChat(string $chatId): array|string
     {
@@ -54,8 +57,9 @@ class Chats extends AbstractApi
 
     /**
      * Return archived chat to chat list
-     *
      * @see https://docs.ultramsg.com/api/post/chats/unarchive
+     *
+     * @param string $chatId chatID for contact or group e.g 14155552671@c.us or 14155552671-441234567890@g.us
      */
     public function unarchiveChat(string $chatId): array|string
     {
@@ -67,8 +71,9 @@ class Chats extends AbstractApi
 
     /**
      * Clear all messages from the chat
-     *
      * @see https://docs.ultramsg.com/api/post/chats/clearMessages
+     *
+     * @param string $chatId chatID for contact or group e.g 14155552671@c.us or 14155552671-441234567890@g.us
      */
     public function clearMessages(string $chatId): array|string
     {
@@ -80,8 +85,9 @@ class Chats extends AbstractApi
 
     /**
      * Delete chat from chat list
-     *
      * @see https://docs.ultramsg.com/api/post/chats/delete
+     *
+     * @param string $chatId chatID for contact or group e.g 14155552671@c.us or 14155552671-441234567890@g.us
      */
     public function deleteChat(string $chatId): array|string
     {
@@ -93,8 +99,9 @@ class Chats extends AbstractApi
 
     /**
      * Make chat messages as read for specific conversation
-     *
      * @see https://docs.ultramsg.com/api/post/chats/read
+     *
+     * @param string $chatId chatID for contact or group e.g 14155552671@c.us or 14155552671-441234567890@g.us
      */
     public function markAsReaded(string $chatId): array|string
     {
