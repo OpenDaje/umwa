@@ -34,7 +34,7 @@ class UltraMsgClient
             'contacts' => new Api\Contacts($this),
 
             default => throw new InvalidArgumentException(
-                sprintf('Undefined api instance called: "%s"', $name)
+                \sprintf('Undefined api instance called: "%s"', $name)
             ),
         };
     }

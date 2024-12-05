@@ -21,8 +21,6 @@ class Options
     private OptionsResolver $resolver;
 
     /**
-     * Class constructor.
-     *
      * @param array<string, mixed> $options The configuration options
      */
     public function __construct(array $options = [])
